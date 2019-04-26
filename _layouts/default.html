@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+  
   <head>
     <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
 
@@ -47,5 +48,11 @@
     </div>
 
     {% include analytics.html %}
+    {% assign paragraphs = page.content | newline_to_br | strip_newlines | split: '<br />' %}
+{% for p in paragraphs %}
+<div dir="auto"> 
+{{ p }}
+</div>
+{% endfor %}
   </body>
 </html>
