@@ -21,10 +21,10 @@ body {
 	background: $white;
   font: 18px/1.4 $helvetica;
   color: $darkGray;
+  direction: rtl;
+  
 }
-.rtl {
-    direction: rtl;
-  }
+
 
 .container {
   margin: 0 auto;
