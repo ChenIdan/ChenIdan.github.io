@@ -3,6 +3,11 @@
   
   <head>
     <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
+    {% for p in paragraphs %}
+<div dir="auto"> 
+{{ p }}
+</div>
+{% endfor %}
 
     {% include meta.html %}
 
