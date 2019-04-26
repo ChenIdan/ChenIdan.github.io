@@ -2,6 +2,14 @@
 layout: default
 ---
 
+
+{% assign paragraphs = page.content | newline_to_br | strip_newlines | split: '<br />' %}
+{% for p in paragraphs %}
+<div dir="auto"> 
+{{ p }}
+</div>
+{% endfor %}
+
 <article class="post">
   <h1>{{ page.title }}</h1>
 
